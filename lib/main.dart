@@ -25,19 +25,128 @@ class StrokeChoices
 class ScoreData
 {
 	static final List<StrokeChoices> data = [
-		StrokeChoices('Level of Conciousness', [
+		StrokeChoices('1A. Level of Conciousness', [
+			//May be assessed casually while taking history
 			StrokeChoice(0, 'Alert; keenly responsive'),
 			StrokeChoice(1, 'Arouses to minor stimulation'),
 			StrokeChoice(2, 'Requires repeated stimulation to arouse'),
 			StrokeChoice(2, 'Movements to pain'),
 			StrokeChoice(2, 'Postures or unresponsive'),
 		]),
-		StrokeChoices('Ask Name and Age', [
+		StrokeChoices('1B. Ask Name and Age', [
 			StrokeChoice(0, 'Both questions right'),
 			StrokeChoice(1, '1 question right'),
 			StrokeChoice(2, '0 questions right'),
 			StrokeChoice(1, 'Dysarthric/intubated/trauma/language barrier'),
 			StrokeChoice(2, 'Aphasiac'),
+		]),
+		StrokeChoices('1C. Blink eyes and squeeze hands', [
+			// Pantomime commands if communication barrier
+			StrokeChoice(0, 'Performs both tasks'),
+			StrokeChoice(1, 'Performs one task'),
+			StrokeChoice(2, 'Performs no tasks'),
+		]),
+		StrokeChoices('2. Horizontal extraocular movements', [
+			// Only assess horizontal gaze
+			StrokeChoice(0, 'Normal'),
+			StrokeChoice(1, 'Partial gaze palsy: can be overcome'),
+			StrokeChoice(1, 'Partial gaze palsy: corrects with oculocephalic reflex'),
+			StrokeChoice(2, 'Forced gaze palsy: cannot be overcome'),
+		]),
+		StrokeChoices('3. Visual Fields', [
+			StrokeChoice(0, 'No visual loss'),
+			StrokeChoice(1, 'Partial hemianopia'),
+			StrokeChoice(2, 'Complete hemianopia'),
+			StrokeChoice(3, 'Patient is bilaterally blind'),
+			StrokeChoice(3, 'Bilateral hemianopia'),
+		]),
+		StrokeChoices('4: Facial palsy', [
+			// Use grimace if obtunded
+			StrokeChoice(0, 'Normal symmetry'),
+			StrokeChoice(1, 'Minor paralysis (flat nasolabial fold, smile asymmetry)'),
+			StrokeChoice(2, 'Partial paralysis (lower face)'),
+			StrokeChoice(3, 'Unilateral complete paralysis (upper/lower face)'),
+			StrokeChoice(3, 'Bilateral complete paralysis (upper/lower face)'),
+		]),
+		StrokeChoices('5A: Left arm motor drift', [
+			//Count out loud and use your fingers to show the patient your count
+			StrokeChoice(0, 'No drift for 10 seconds'),
+			StrokeChoice(1, 'Drift, but does not hit bed'),
+			StrokeChoice(2, 'Drift, hits bed'),
+			StrokeChoice(2, 'Some effort against gravity'),
+			StrokeChoice(3, 'No effort against gravity'),
+			StrokeChoice(4, 'No movement'),
+			StrokeChoice(0, 'Amputation/joint fusion'),
+		]),
+		StrokeChoices('5B: Right arm motor drift', [
+			//Count out loud and use your fingers to show the patient your count
+			StrokeChoice(0, 'No drift for 10 seconds'),
+			StrokeChoice(1, 'Drift, but does not hit bed'),
+			StrokeChoice(2, 'Drift, hits bed'),
+			StrokeChoice(2, 'Some effort against gravity'),
+			StrokeChoice(3, 'No effort against gravity'),
+			StrokeChoice(4, 'No movement'),
+			StrokeChoice(0, 'Amputation/joint fusion'),
+		]),
+		StrokeChoices('6A: Left leg motor drift', [
+			//Count out loud and use your fingers to show the patient your count
+			StrokeChoice(0, 'No drift for 5 seconds'),
+			StrokeChoice(1, 'Drift, but does not hit bed'),
+			StrokeChoice(2, 'Drift, hits bed'),
+			StrokeChoice(2, 'Some effort against gravity'),
+			StrokeChoice(3, 'No effort against gravity'),
+			StrokeChoice(4, 'No movement'),
+			StrokeChoice(0, 'Amputation/joint fusion'),
+		]),
+		StrokeChoices('6B: Right leg motor drift', [
+			//Count out loud and use your fingers to show the patient your count
+			StrokeChoice(0, 'No drift for 5 seconds'),
+			StrokeChoice(1, 'Drift, but does not hit bed'),
+			StrokeChoice(2, 'Drift, hits bed'),
+			StrokeChoice(2, 'Some effort against gravity'),
+			StrokeChoice(3, 'No effort against gravity'),
+			StrokeChoice(4, 'No movement'),
+			StrokeChoice(0, 'Amputation/joint fusion'),
+		]),
+		StrokeChoices('7: Limb Ataxia', [
+			//FNF/heel-shin
+			StrokeChoice(0, 'No ataxia'),
+			StrokeChoice(1, 'Ataxia in 1 Limb'),
+			StrokeChoice(2, 'Ataxia in 2 Limbs'),
+			StrokeChoice(0, 'Does not understand'),
+			StrokeChoice(0, 'Paralyzed'),
+			StrokeChoice(0, 'Amputation/joint fusion'),
+		]),
+		StrokeChoices('8: Sensation', [
+			StrokeChoice(0, 'Normal; no sensory loss'),
+			StrokeChoice(1, 'Mild-moderate loss: less sharp/more dull'),
+			StrokeChoice(1, 'Mild-moderate loss: can sense being touched'),
+			StrokeChoice(2, 'Complete loss: cannot sense being touched at all'),
+			StrokeChoice(2, 'No response and quadriplegic'),
+			StrokeChoice(2, 'Coma/unresponsive'),
+		]),
+		StrokeChoices('9: Language/aphasia', [
+			//Describe the scene; name the items; read the sentences (see Evidence)
+			StrokeChoice(0, 'Normal; no aphasia'),
+			StrokeChoice(1, 'Mild-moderate aphasia: some obvious changes, without significant limitation'),
+			StrokeChoice(2, 'Severe aphasia: fragmentary expression, inference needed, cannot identify materials'),
+			StrokeChoice(3, 'Mute/global aphasia: no usable speech/auditory comprehension'),
+			StrokeChoice(3, 'Coma/unresponsive'),
+		]),
+		StrokeChoices('10: Dysarthria', [
+			//Read the words (see Evidence)
+			StrokeChoice(0, 'Normal'),
+			StrokeChoice(1, 'Mild-moderate dysarthria: slurring but can be understood'),
+			StrokeChoice(2, 'Severe dysarthria: unintelligible slurring or out of proportion to dysphasia'),
+			StrokeChoice(2, 'Mute/anarthric'),
+			StrokeChoice(0, 'Intubated/unable to test'),
+		]),
+		StrokeChoices('11: Extinction/inattention', [
+			StrokeChoice(0, 'No abnormality'),
+			StrokeChoice(1, 'Visual/tactile/auditory/spatial/personal inattention'),
+			StrokeChoice(1, 'Extinction to bilateral simultaneous stimulation'),
+			StrokeChoice(2, 'Profound hemi-inattention (ex: does not recognize own hand)'),
+			StrokeChoice(2, 'Extinction to >1 modality'),
 		]),
 	];
 }
